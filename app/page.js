@@ -7,6 +7,7 @@ export default function HomePage() {
       <ul>
         <li>
           <Link href="/week-2">Go to Week 2 →</Link>
+          <Link href="/week-3">Go to Week 3 →</Link>
         </li>
       </ul>
     </main>
