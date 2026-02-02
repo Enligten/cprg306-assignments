@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-  ],
+, "app/layout.js", "app/components/StudentInfo.js", "app/week-2/page.js", "app/page.js"  ],
   "exclude": ["node_modules"]
 }
