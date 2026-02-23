@@ -16,7 +16,7 @@ const categories = [
   "other",
 ];
 
-export default function NewItem() {
+export default function NewItem({ onAddItem }) {
   const [name, setName] = useState("");
   const [quantity, setQuantity] = useState(1);
   const [category, setCategory] = useState("produce");
@@ -24,12 +24,14 @@ export default function NewItem() {
   function handleSubmit(e) {
     e.preventDefault();
 
-    const item = { name, quantity, category };
-    console.log(item);
+    const item = {
+      id: crypto.randomUUID(),
+      name,
+      quantity,
+      category,
+    };
 
-    alert(
-      `Added: ${item.name}, quantity: ${item.quantity}, category: ${item.category}`
-    );
+    onAddItem(item);
 
     setName("");
     setQuantity(1);
